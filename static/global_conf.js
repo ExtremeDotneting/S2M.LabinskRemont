@@ -1,6 +1,6 @@
 const GlobalConfigs = {
   pageTitle:"App on Phonegap",
-  navigationType:ProjectConsts.allNavigationTypes.singlePage,  //can be "hamburger", "single_page"...
+  navigationType:ProjectConsts.allNavigationTypes.listMenu,  //can be "hamburger", "single_page"...
   useIFramesEverywhere:false,
   homeSitePageUrl:"http://tss-game.cc.ua/",
   menuItems:[

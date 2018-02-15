@@ -29,7 +29,7 @@
     </v-toolbar>
 
     <v-content id="my-div-content">
-        <v-list id="my-content">
+        <v-list id="my-content" style="position: absolute; height: 100%; width: 100%;">
           <template v-for="item in menuItems">
             <v-list-tile @click="onMenuItemClick(item.url)">
               <v-list-tile-action>
@@ -115,7 +115,7 @@
 
         function calcSize() {
 
-          content.style.height = "100% ";
+          content.style.height = "calc(100% - " + divContent.style.paddingTop + ")";
         }
 
         calcSizeGlobal = calcSize;
