@@ -1,2 +1,2 @@
 npm run build
-http-server D:\CollegeProjects\S2M.LabinskRemont\dist
+http-server E:\cf\projects\Work-projects\S2M.LabinskRemont
