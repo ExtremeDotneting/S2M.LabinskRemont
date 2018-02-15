@@ -10,7 +10,7 @@
       <v-list>
         <template v-for="item in menuItems">
           <v-list-group v-if="item.children" v-model="item.model" no-action>
-            <v-list-tile slot="item" @click="onMenuItemClick(item.url)">
+            <v-list-tile slot="item" @click="onMenuItemClick(item)">
               <v-list-tile-action>
                 <v-icon>{{ item.model ? item.icon : item.iconAlt }}</v-icon>
               </v-list-tile-action>
@@ -22,7 +22,7 @@
             </v-list-tile>
             <v-list-tile
               v-for="child in item.children"
-              @click="onMenuItemClick(item.url)"
+              @click="onMenuItemClick(item)"
             >
 
               <v-list-tile-action>
@@ -36,7 +36,7 @@
             </v-list-tile>
           </v-list-group>
 
-          <v-list-tile v-else @click="onMenuItemClick(item.url)">
+          <v-list-tile v-else @click="onMenuItemClick(item)">
             <v-list-tile-action>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-tile-action>
@@ -123,8 +123,6 @@
   var calcSizeGlobal = null;
 
   export default {
-
-
     name: 'HamburgerApp',
     data: () => ({
       dialog: false,
@@ -137,9 +135,11 @@
       isMenuFlat:GlobalConfigs.styling.isMenuFlat
     }),
     methods:{
-      onMenuItemClick:function (url) {
-        if(GlobalConfigs.useIFramesEverywhere) {
+      onMenuItemClick:function (item) {
+	    var url=item.url;
+        if(GlobalConfigs.useIFramesEverywhere && !(item.notLoadToIFrame===true)) {
           this.siteUrl = url;
+		  
         }
         else{
           window.location.href=url;
@@ -173,6 +173,7 @@
 
     //hooks!
     created: function () {
+	      
 //            for (var i = 0; i < 50; i++) {
 //                this.$data.content.push({label: 'label#' + i});
 //            }

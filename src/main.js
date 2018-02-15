@@ -41,7 +41,7 @@ else if(GlobalConfigs.navigationType===ProjectConsts.allNavigationTypes.singlePa
   }
 }
 else{
-  document.getElementById("apploc").innerHTML="<h1>navigation type not found</h1>"
+  document.getElementById("apploc").innerHTML="<h1>Navigation type not found</h1>"
 }
 
 
