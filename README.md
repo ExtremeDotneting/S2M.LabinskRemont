@@ -1,21 +1,20 @@
-# aca-front
+# Сборка приложения андроид
 
-> A Vue.js project
+> Здесь вы можете прочесть инструкцию по сборке приложения.
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+1. Данная инструкция предпологает что у вас уже есть опыт работы с visual studio и со сборкой андроид приложений в частности. 
+Здесь описанны только некоторые отличающиеся моменты.
+2. Перед началом вам нужно [собрать веб проект](S2M.Droid/WebBase/README.md) в папке S2M.Droid/WebBase/README.md.
+3. Затем запустите файл 
 ```
+prepare_cs.cmd
+```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+из папки S2M.Droid. Он сам скопирует нужные файлы из веб проекта в папку с ассетами, 
+скопирует логотип приложения в нужную папку.
+4. Зайдите в visual studio и включите все файлы из папки Assets в свой проект.
+5. Соберите андроид приложение как обычно. Кстати, вы можете дебажить браузер запущенного приложения, 
+просто на компьютере в браузере перейдите по адресу chrome://inspect
+6. Публикация. Для этого вам нужно сначала заархивировать 
+приложение (в vs правая кнопка міши по проекту -> архивация -> распространение).
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

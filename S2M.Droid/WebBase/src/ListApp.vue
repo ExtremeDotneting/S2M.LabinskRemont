@@ -31,7 +31,7 @@
     <v-content id="my-div-content">
         <v-list id="my-content" style="position: absolute; height: 100%; width: 100%;">
           <template v-for="item in menuItems">
-            <v-list-tile @click="onMenuItemClick(item.url)">
+            <v-list-tile @click="onMenuItemClick(item)">
               <v-list-tile-action>
                 <v-icon>{{ item.icon }}</v-icon>
               </v-list-tile-action>
@@ -67,12 +67,12 @@
       isMenuFlat: GlobalConfigs.styling.isMenuFlat
     }),
     methods: {
-      onMenuItemClick: function (url) {
-        if (GlobalConfigs.useIFramesEverywhere) {
-          alert("Disable iframes to make it work!")
+      onMenuItemClick: function (item) {
+        if(!(item.onClick==null) && typeof(item.onClick) == "function") {
+          item.onClick();
         }
-        else {
-          window.location.href = url;
+        else{
+          window.location.href = item.url;
         }
       }
     },

@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4398C36C-C302-4B65-8E3F-5FD6D07F5FD6}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>S2M.Droid</RootNamespace>
+    <AssemblyName>S2M.Droid</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>PdbOnly</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+    <AndroidCreatePackagePerAbi>true</AndroidCreatePackagePerAbi>
+    <AndroidEnableMultiDex>false</AndroidEnableMultiDex>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android.Export" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LocalStorage.cs" />
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="MyJSInterface.cs" />
+    <Compile Include="MyWebViewClient.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <MultiDexMainDexList Include="multidex.keep" />
+    <AndroidAsset Include="Assets\static\css\app.278e4eb6907284177130a01d4a0502ce.css.map" />
+    <AndroidAsset Include="Assets\static\js\0.a2fdda96b2ca483d302a.js.map" />
+    <AndroidAsset Include="Assets\static\js\app.7a7e0d5e6511b9dc9c2a.js.map" />
+    <AndroidAsset Include="Assets\static\js\manifest.9f44051156ecf048a621.js.map" />
+    <AndroidAsset Include="Assets\static\js\vendor.c85558c9c8ed095edef5.js.map" />
+    <None Include="packages.config" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\Strings.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\error.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\global_conf.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\pr_consts.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\css\app.278e4eb6907284177130a01d4a0502ce.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\js\0.a2fdda96b2ca483d302a.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\js\app.7a7e0d5e6511b9dc9c2a.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\js\manifest.9f44051156ecf048a621.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\js\vendor.c85558c9c8ed095edef5.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\index.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+		Other similar extension points exist, see Microsoft.Common.targets.
+		<Target Name="BeforeBuild">
+		</Target>
+		<Target Name="AfterBuild">
+		</Target>
+	-->
+</Project>

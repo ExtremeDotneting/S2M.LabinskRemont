@@ -136,13 +136,19 @@
     }),
     methods:{
       onMenuItemClick:function (item) {
-	    var url=item.url;
-        if(GlobalConfigs.useIFramesEverywhere && !(item.notLoadToIFrame===true)) {
-          this.siteUrl = url;
-		  
+	      var url=item.url;
+        if(!(item.onClick==null) && typeof(item.onClick) == "function") {
+          item.onClick();
         }
-        else{
-          window.location.href=url;
+        else
+        {
+          if (GlobalConfigs.useIFramesEverywhere && !(item.notLoadToIFrame === true)) {
+            this.siteUrl = url;
+
+          }
+          else {
+            window.location.href = url;
+          }
         }
       }
     },
@@ -173,7 +179,7 @@
 
     //hooks!
     created: function () {
-	      
+
 //            for (var i = 0; i < 50; i++) {
 //                this.$data.content.push({label: 'label#' + i});
 //            }
