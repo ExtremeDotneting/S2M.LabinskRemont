@@ -3,6 +3,7 @@ node_modules/
 /dist/
 
 MobileDist/res
+MobileDist/.git
 MobileDist/static
 MobileDist/index.html
 
