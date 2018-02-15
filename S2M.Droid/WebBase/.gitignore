@@ -2,8 +2,10 @@
 node_modules/
 /dist/
 
-MobileDist/*
-!MobileDist/config.xml
+MobileDist/res
+MobileDist/static
+MobileDist/index.html
+
 
 
 npm-debug.log*
